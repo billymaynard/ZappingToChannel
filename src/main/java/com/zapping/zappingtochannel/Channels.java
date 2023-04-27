@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public class Channels {
     int numberofchannels;
-    public Channels(int numberofchannels){
-        this.numberofchannels = numberofchannels;
+    public Channels(int newnumberofchannels){
+        this.numberofchannels = newnumberofchannels;
     }
     public Direction closestto(int currentchannel, int desiredchannel){
         if (desiredchannel==0 || currentchannel == 0 || desiredchannel > numberofchannels || currentchannel > numberofchannels){

@@ -33,4 +33,30 @@ class ChannelsTest {
         //Assert
         assertEquals(1,newdirection.getClicks());
     }
+    @Test
+    @DisplayName("Canal Destino 30, Canal Actual 10")
+    void test3() {
+        //Arrange
+        Channels setofChannels = new Channels(99);
+        Direction newdirection;
+
+        //Act
+        newdirection = setofChannels.closestto(10,30);
+
+        //Assert
+        assertEquals(20,newdirection.getClicks());
+    }
+    @Test
+    @DisplayName("Canal Destino 99, Canal Actual 2")
+    void test4() {
+        //Arrange
+        Channels setofChannels = new Channels(99);
+        Direction newdirection;
+
+        //Act
+        newdirection = setofChannels.closestto(2,99);
+
+        //Assert
+        assertEquals(2,newdirection.getClicks());
+    }
 }
