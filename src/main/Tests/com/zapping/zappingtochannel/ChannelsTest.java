@@ -9,7 +9,7 @@ class ChannelsTest {
 
     @Test
     @DisplayName("Canal Destino 0")
-    void canaldestino0() {
+    void test1() {
         //Arrange
         Channels setofChannels = new Channels(99);
         Direction newdirection;
@@ -19,5 +19,18 @@ class ChannelsTest {
 
         //Assert
         assertEquals(0,newdirection.getClicks());
+    }
+    @Test
+    @DisplayName("Canal Destino 2, Canal Actual 1")
+    void test2() {
+        //Arrange
+        Channels setofChannels = new Channels(99);
+        Direction newdirection;
+
+        //Act
+        newdirection = setofChannels.closestto(1,2);
+
+        //Assert
+        assertEquals(1,newdirection.getClicks());
     }
 }
