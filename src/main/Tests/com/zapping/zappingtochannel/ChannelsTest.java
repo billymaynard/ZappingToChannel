@@ -72,4 +72,17 @@ class ChannelsTest {
         //Assert
         assertEquals(41,newdirection.getClicks());
     }
+    @Test
+    @DisplayName("Canal Destino 5, Canal Actual 63")
+    void test6() {
+        //Arrange
+        Channels setofChannels = new Channels(99);
+        Direction newdirection;
+
+        //Act
+        newdirection = setofChannels.closestto(63,5);
+
+        //Assert
+        assertEquals(41,newdirection.getClicks());
+    }
 }
