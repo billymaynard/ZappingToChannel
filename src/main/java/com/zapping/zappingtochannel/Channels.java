@@ -11,7 +11,7 @@ public class Channels {
     }
     public Direction closestto(int currentchannel, int desiredchannel){
         if (desiredchannel==0 || currentchannel == 0 || desiredchannel > numberofchannels || currentchannel > numberofchannels){
-            return null;
+            return new Direction(0,false);
         }
         Direction newdirection;
         if (currentchannel==desiredchannel){
